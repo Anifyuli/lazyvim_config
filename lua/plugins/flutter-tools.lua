@@ -13,6 +13,9 @@ return {
         device = true,
       },
     },
+    debugger = {
+      run_via_dap = true,
+    },
     dev_log = {
       enabled = true,
       notify_errors = false,

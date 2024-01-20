@@ -37,6 +37,10 @@ return {
             end,
           },
         },
+        source_selector = {
+          winbar = false,
+          statusline = false,
+        },
       }
     end,
   },
