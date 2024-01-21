@@ -9,4 +9,4 @@ opt.wrap = true
 
 -- Configure dart-vim-plugin
 g.dart_style_guide = 2
-g.dart_format_on_save = true
+g.dart_format_on_save = false
