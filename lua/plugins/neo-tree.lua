@@ -28,20 +28,21 @@ return {
           follow_current_file = { enabled = true, leave_dirs_open = true },
           hijack_netrw_behavior = "open_current",
           use_libuv_file_watcher = true,
-        },
-        event_handlers = {
-          {
-            event = "neo_tree_buffer_enter",
-            handler = function(_)
-              vim.opt_local.signcolumn = "auto"
-            end,
+          source_selector = {
+            winbar = false,
+            statusline = false,
           },
         },
-        source_selector = {
-          winbar = false,
-          statusline = false,
-        },
       }
+    end,
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    optional = true,
+    opts = function(_, opts)
+      opts.open_files_do_not_replace_types = opts.open_files_do_not_replace_types
+        or { "terminal", "Trouble", "qf", "Outline", "trouble" }
+      table.insert(opts.open_files_do_not_replace_types, "edgy")
     end,
   },
 }

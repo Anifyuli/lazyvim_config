@@ -5,13 +5,14 @@ return {
       -- lsp
       "bash-language-server",
       "css-lsp",
-      "emmet-ls",
       "html-lsp",
       "lua-language-server",
       "marksman",
+      "vue-language-server",
       -- dap
       "bash-debug-adapter",
       "dart-debug-adapter",
+      "js-debug-adapter",
       -- linter
       "htmlhint",
       "markdownlint",

@@ -8,13 +8,15 @@ return {
     },
     ensure_installed = {
       "bash",
-      "dart",
       "css",
+      "dart",
       "html",
       "javascript",
       "lua",
       "markdown",
       "markdown_inline",
+      "tsx",
+      "typescript",
     },
     incremental_selection = {
       enable = true,
