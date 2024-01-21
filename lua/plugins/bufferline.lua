@@ -15,7 +15,7 @@ return {
       local Offset = require("bufferline.offset")
       if not Offset.edgy then
         local get = Offset.get()
-        if package.loaded.edgy then
+        if not Offset.edgy then
           local layout = require("edgy.config").layout
           local ret = { left = "", left_size = 0, right = "", right_size = 0 }
           for _, pos in ipairs({ "left", "right" }) do
