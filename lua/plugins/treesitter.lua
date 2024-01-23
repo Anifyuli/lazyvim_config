@@ -4,7 +4,7 @@ return {
     highlight = { enable = true },
     indent = {
       enable = true,
-      disable = { "dart" },
+      disable = { "dart", "html" },
     },
     ensure_installed = {
       "bash",
