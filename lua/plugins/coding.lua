@@ -15,4 +15,9 @@ return {
   {
     "AndrewRadev/inline_edit.vim",
   },
+  -- Add Wakatime to tracking coding activities in Neovim
+  {
+    "wakatime/vim-wakatime",
+    lazy = false,
+  },
 }
