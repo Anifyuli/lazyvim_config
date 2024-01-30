@@ -17,6 +17,7 @@ return {
       "markdown_inline",
       "tsx",
       "typescript",
+      "vue",
     },
     incremental_selection = {
       enable = true,
