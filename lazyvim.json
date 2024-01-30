@@ -1,9 +1,8 @@
 {
   "extras": [
     "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.lang.typescript",
-    "lazyvim.plugins.extras.ui.edgy",
-    "lazyvim.plugins.extras.vscode"
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.typescript"
   ],
   "news": {
     "NEWS.md": "2123"
