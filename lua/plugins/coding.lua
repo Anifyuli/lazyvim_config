@@ -10,14 +10,16 @@ return {
   -- Dart formatting support
   {
     "dart-lang/dart-vim-plugin",
+    enabled = true,
   },
   -- Embedded code support
   {
     "AndrewRadev/inline_edit.vim",
+    enabled = true,
   },
   -- Add Wakatime to tracking coding activities in Neovim
   {
     "wakatime/vim-wakatime",
-    lazy = false,
+    enabled = true,
   },
 }

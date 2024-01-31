@@ -11,7 +11,7 @@ map("n", "<leader>F", function()
 end, { desc = "Flutter Tools" })
 
 -- Show help in normal mode
-map("n", "<tab>", function()
+map("n", "<S-tab>", function()
   vim.lsp.buf.hover()
 end, { desc = "Show code line info" })
 
