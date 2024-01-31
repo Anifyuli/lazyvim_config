@@ -29,7 +29,7 @@ return {
       WinBar = { link = "WinBar" },
       WinBarNC = { link = "WinBarNC" },
     },
-    open_mapping = [[<c-\>]],
+    open_mapping = [[<F7>]],
     float_opts = {
       border = "curved",
     },
