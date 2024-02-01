@@ -35,3 +35,6 @@ map({ "n", "t" }, "<M-.>", function()
     end
   end
 end, { desc = "Exit from Toggleterm" })
+
+-- Adjust delete keymaps
+map("n", "<Del>", [["_d]], { desc = "Blackhole delete" })
