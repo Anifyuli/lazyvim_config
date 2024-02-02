@@ -24,7 +24,7 @@ rmmap("n", "<c-/>")
 map("n", "<leader>Th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>", { desc = "ToggleTerm horizontal split" })
 map("n", "<leader>Tv", "<cmd>ToggleTerm size=40 direction=vertical<cr>", { desc = "ToggleTerm vertical split" })
 map("n", "<leader>Tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "ToggleTerm float" })
-map({ "n", "t" }, "<F7>", "<Cmd>ToggleTerm<CR>", { desc = "Show/hide ToggleTerm" })
+map({ "n", "t" }, "<F7>", "<cmd>ToggleTerm<cr>", { desc = "Show/hide ToggleTerm" })
 map({ "n", "t" }, "<C-'>", "<cmd>ToggleTerm<cr>")
 
 -- Remove Toggleterm buffer
@@ -34,7 +34,15 @@ map({ "n", "t" }, "<M-.>", function()
       vim.cmd.bdelete({ args = { buf }, bang = true })
     end
   end
-end, { desc = "Exit from Toggleterm" })
+end, { desc = "Exit from (all) Toggleterm" })
+
+map({ "n", "t" }, "<M-,>", function()
+  local current_buf = vim.api.nvim_get_current_buf()
+  local filetype = vim.bo[current_buf].filetype
+  if filetype == "toggleterm" then
+    vim.cmd("bdelete! " .. current_buf)
+  end
+end, { noremap = true, desc = "Exit from (active) Toggleterm" })
 
 -- Adjust delete keymaps
-map("n", "<Del>", [["_d]], { desc = "Blackhole delete" })
+map("v", "<Del>", [["_d]], { desc = "Blackhole delete" })
