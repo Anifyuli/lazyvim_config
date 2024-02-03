@@ -10,11 +10,6 @@ map("n", "<leader>F", function()
   require("telescope").extensions.flutter.commands()
 end, { desc = "Flutter Tools" })
 
--- Show help in normal mode
-map("n", "<S-tab>", function()
-  vim.lsp.buf.hover()
-end, { desc = "Show code line info" })
-
 -- Remove LazyTerm keymap
 rmmap("n", "<leader>ft")
 rmmap("n", "<leader>fT")
